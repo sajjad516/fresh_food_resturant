@@ -16,28 +16,36 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <style>
+      #search-field::placeholder {
+        color: white;
+      }
+    </style>
   </head>
   <body class="bg-black">
     <!-- <div class="loader"></div> -->
 
-    <h2 style="color: greenyellow" class="text-center mt-3">
+    <h2 style="color: yellow" class="text-center mt-3">
       Search your favourite Food
     </h2>
 
     <!-- meal search area  -->
 
-    <div class="input-group mb-3 w-50 mt-3 mx-auto">
+    <div
+      class="col-md-12 col-sm-12 input-group mb-3 w-50 mt-md-4 mt-sm-4 mx-auto"
+    >
       <input
         id="search-field"
+        style="border-radius: 30px 0 0 30px"
         type="text"
-        class="form-control"
+        class="form-control bg-transparent border-success text-white fs-6 fw-normal"
         placeholder="Search the food you want 🍔"
         aria-label="Search the food you want"
-        aria-describedby="button-addon2"
       />
       <button
         onclick="searchFood()"
-        class="btn btn-outline-secondary"
+        style="border-radius: 0 30px 30px 0"
+        class="btn btn-outline-success fw-bolder fs-6 text-white"
         type="button"
         id="button-search"
       >
@@ -59,9 +67,9 @@
     </div>
 
     <!-- error message showing -->
-    <div id="error-message" class="text-center text-danger fs-5"></div>
+    <div id="error-message" class="text-center text-danger fs-5 mb-3"></div>
 
-    <div id="error-msg" class="text-center text-danger fs-5"></div>
+    <div id="error-msg" class="text-center text-danger fs-5 mb-3"></div>
 
     <!-- meal search area end -->
     <div
